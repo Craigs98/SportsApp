@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/show'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :posts
@@ -6,4 +7,7 @@ Rails.application.routes.draw do
     get 'home/index'
 
     root to: "home#index"
+    resources :users
+
+
 end
