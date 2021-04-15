@@ -8,4 +8,8 @@ class Post < ApplicationRecord
   def display_day_published
     "Published : #{created_at.strftime('%-b %-d, %Y')}"
   end
+
+  def user_name_published
+    "Written by: #{user.email}"
+  end
 end
