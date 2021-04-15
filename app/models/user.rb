@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
          has_many :posts
 
+         # Test models kfnkshn
+
 end
