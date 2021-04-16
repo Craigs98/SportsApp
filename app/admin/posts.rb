@@ -25,4 +25,6 @@ ActiveAdmin.register Post do
   #   permitted
   # end
 
+  permit_params :email, :updated_at, :admin, :user_name
+
 end

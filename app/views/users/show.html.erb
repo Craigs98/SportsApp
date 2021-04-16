@@ -1,7 +1,4 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-
-<div>
+<div class="container col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-left">
   <aside class="col-md-4">
     <div>
       <h1>My Profile</h1>
@@ -12,6 +9,12 @@
   </aside>
 </div>
 
+
+
 <% @user_posts.each do |post| %>
+<div class="container ">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Title</label>
 <%= post.title %>
+<%= link_to 'post', post %>
+</div>
 <% end %>

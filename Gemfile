@@ -7,6 +7,10 @@ gem 'rexml'
 
 gem 'devise'
 
+gem 'activeadmin'
+
+gem "ransack", "~> 2.4"
+
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 
@@ -25,7 +29,6 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 
-gem 'activeadmin'
 
 gem 'twitter'
 # Use Redis adapter to run Action Cable in production
@@ -65,5 +68,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem "ransack", "~> 2.4"

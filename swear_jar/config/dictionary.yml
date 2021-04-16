@@ -1,0 +1,41 @@
+
+# the filter currently checks for words that are 3 or more characters.
+---
+ass: "*ss"
+asses: "*ss*s"
+asshole: "*ssh*l*"
+assholes: "*ssh*l*s"
+bitch: b*tch
+bitches: b*tch*s
+cunt: c*nt
+cunts: c*nts
+damn: d*mn
+dildo: d*ld*
+dildos: d*ld*s
+dick: d*ck
+fag: f*g
+fagging: f*gg*ng
+faggot: f*gg*t
+faggs: f*ggs
+fagot: f*g*t
+fagots: f*g*ts
+fistfuck: f*stf*ck
+fuck: f*ck
+fucked: f*ck*d
+fucker: f*ck*r
+fuckers: f*ck*rs
+fuckin: f*ck*n
+fucking: f*ck*ng
+fuckings: f*ck*ngs
+fuckme: f*ckm*
+fucks: f*cks
+fuk: f*k
+fuks: f*ks
+prick: pr*ck
+pricks: pr*cks
+pusies: p*ss**s
+pussy: p*ssy
+pussys: p*ssys
+shit: sh*t
+shitty: sh*tty
+shity: sh*tty

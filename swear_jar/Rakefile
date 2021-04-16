@@ -1,0 +1,34 @@
+
+# Needs Jewler gem for creation/ built in another app and had trouble incorporating into this
+# through some investigation think it could be mysql DB not working
+
+require 'rake'
+
+require 'jeweler'
+Jeweler::Tasks.new do |gem|
+  gem.name = "swear_jar"
+  gem.summary = %Q{A Rails plugin gem for filtering out swear words.}
+  gem.description = %Q{Allows you to filter swear words using basic replacement or a dictionary term.}
+  gem.email = "craigs98@outlook.com"
+  gem.authors = ["Craiig Smith"]
+end
+Jeweler::RubygemsDotOrgTasks.new
+
+desc 'Default: run unit tests.'
+task :default => :test
+
+desc 'Test the Swear Jar plugin.'
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'lib'
+  t.pattern = 'test/**/*_test.rb'
+  t.verbose = true
+end
+
+desc 'Measures test coverage using rcov'
+task :rcov do
+  rm_f "coverage"
+  rm_f "coverage.data"
+  rcov = "rcov --rails --aggregate coverage.data --text-summary -Ilib"
+  system("#{rcov} --html #{Dir.glob('test/**/*_test.rb').join(' ')}")
+  system("open coverage/index.html") if PLATFORM['darwin']
+end
