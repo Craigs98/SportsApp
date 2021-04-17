@@ -3,8 +3,7 @@ class HomeController < ApplicationController
   before_action :load_posts, only: :index
 
   def index
-    @q = Post.ransack(params[:q])
-    @posts = @q.result
+    
   end
 
   private
