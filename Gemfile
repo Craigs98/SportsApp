@@ -15,22 +15,14 @@ gem 'activeadmin'
 # Used for creating the search bar
 gem "ransack", "~> 2.4"
 
-
-group :development, :test do
-gem 'mysql2', '~> 0.5'
-end
-
-
-# Gem used for deploying
-gem 'pg'
-
 # Initially tried to use for search bar but when i tried to uninstall rails gave a lot of warnings
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
-
+# Use mysql as the database for Active Record
+gem 'mysql2', '~> 0.5'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -78,12 +70,6 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
-
-group :production do
-gem 'pg'
-gem 'rails_12factor'
-end
-
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
