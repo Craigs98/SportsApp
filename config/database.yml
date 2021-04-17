@@ -50,6 +50,6 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['postgres://olemiuryobratu:a148d1388ec3c9c3a1af6dc7f8611cbaead05b12ed4f55e83ad7e63a0a022ae2@ec2-34-233-0-64.compute-1.amazonaws.com:5432/dfiorvisuin3m8']
+  database: <%= ENV['postgres://olemiuryobratu:a148d1388ec3c9c3a1af6dc7f8611cbaead05b12ed4f55e83ad7e63a0a022ae2@ec2-34-233-0-64.compute-1.amazonaws.com:5432/dfiorvisuin3m8'] %>
 #  username: newsproject
 #  password: <%= ENV['NEWSPROJECT_DATABASE_PASSWORD'] %>
