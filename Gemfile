@@ -15,6 +15,9 @@ gem 'activeadmin'
 # Used for creating the search bar
 gem "ransack", "~> 2.4"
 
+# Gem used for deploying
+gem 'pg'
+
 # Initially tried to use for search bar but when i tried to uninstall rails gave a lot of warnings
 gem 'sunspot_rails'
 gem 'sunspot_solr'
