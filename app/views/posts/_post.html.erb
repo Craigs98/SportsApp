@@ -1,4 +1,5 @@
 <div class='col-sm-6 col-lg-4'>
+<!-- X17126991 - Craig Smith   -->
   <div class="card">
   <div class="card-block p-3 mb-2 bg-light text-dark">
     <h4 class="card-title"><%= link_to post.title, post %></h4>
@@ -6,14 +7,14 @@
     <p class="published-user"><%= post.user_name_published %></p>
     <p class-"card-text"><%= truncate(post.body, length: 130) %></p>
     <%= link_to 'Read', post, class: 'btn btn-info' %>
-    <% if current_user && current_user.admin %>
+    <% if current_user && current_user.admin %> <!-- allows only an admin to delete posts -->
     <%= link_to 'Delete post', post, method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger' %>
     <% end %>
 
-    <% if current_user && current_user.admin %>
+    <% if current_user && current_user.admin %> <!--allows only an admin to publish posts -->
     <%= link_to 'Publish', edit_post_path(post) , class: 'btn btn-success' %>
     <% end %>
     </div>
-  
+
   </div>
 </div>

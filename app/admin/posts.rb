@@ -4,18 +4,8 @@ ActiveAdmin.register Post do
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
   # Uncomment all parameters which should be permitted for assignment
-  index do
-    selectable_column
-      column :id
-      column :title
-      column :published?
-      column :user
-      column :created_at
-    actions
-    end
-
-
-   permit_params :title, :body, :conclusion, :user_id
+  #
+  # permit_params :title, :body, :conclusion, :user_id
   #
   # or
   #
@@ -25,6 +15,17 @@ ActiveAdmin.register Post do
   #   permitted
   # end
 
-  permit_params :email, :updated_at, :admin, :user_name
+
+    index do
+    selectable_column
+      column :id
+      column :title
+      column :published?
+      column :user
+      column :created_at
+    actions
+    end
+
+    permit_params :title, :body, :conclusion, :user_id
 
 end

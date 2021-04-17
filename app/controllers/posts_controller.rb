@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
+  # X17126991 - Craig Smith
   before_action :set_post, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:show, :index]
 
   # GET /posts or /posts.json
+
+  # using ransack gem to set up search funtionality, q stands for query
   def index
     @q = Post.ransack(params[:q])
     @posts = @q.result
@@ -68,6 +71,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :body, :conclusion, :published)
+      params.require(:post).permit(:title, :body, :conclusion, :published) # added published to posts page for admin use
     end
 end

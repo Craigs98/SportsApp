@@ -3,14 +3,19 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
+# Used for testing
 gem 'rexml'
 
+# Used for user authentication
 gem 'devise'
 
+# Used for creating a nice dashboard for a super user
 gem 'activeadmin'
 
+# Used for creating the search bar
 gem "ransack", "~> 2.4"
 
+# Initially tried to use for search bar but when i tried to uninstall rails gave a lot of warnings
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 
@@ -29,7 +34,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 
-
+# Tried to mess around with an inbuilt social media system but had errors and couldnt remove
 gem 'twitter'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

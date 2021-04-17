@@ -8,7 +8,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
 
 
-        <% if user_signed_in? %>
+        <% if user_signed_in? %> <!-- User must be signed in to see these options -->
         <li class="nav-item">
           <%= link_to 'Sign out ', destroy_user_session_path, method: :delete, class: 'nav-link text-light' %>
         </li>
@@ -25,7 +25,7 @@
         </li>
 
 
-        <% else %>
+        <% else %> <!-- non signed in user can see these -->
         <li class="nav-item">
           <%= link_to 'Register', new_user_registration_path, class: 'nav-link text-light' %>
         </li>
@@ -34,9 +34,7 @@
           <%= link_to 'Sign in', new_user_session_path, class: 'nav-link text-light' %>
         </li>
 
-        <li class="nav-item">
-          <%= link_to 'Posts',  posts_path, class: 'nav-link text-light' %>
-        </li>
+
 
         <li class="nav-item">
           <%= link_to 'Admin',  admin_dashboard_path, class: 'nav-link text-light' %>

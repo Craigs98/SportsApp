@@ -1,16 +1,5 @@
 ActiveAdmin.register User do
 
-
-
-
-  index do
-    selectable_column
-      column :id
-      column :email
-      column :updated_at
-      column :admin
-    actions
-  end
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -26,4 +15,13 @@ ActiveAdmin.register User do
   #   permitted
   # end
 
+  index do
+    selectable_column
+      column :id
+      column :email
+      column :updated_at
+      column :admin
+    actions
+  end
+permit_params :email, :updated_at, :admin
 end

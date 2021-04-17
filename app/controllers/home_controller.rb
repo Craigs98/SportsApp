@@ -1,8 +1,10 @@
 class HomeController < ApplicationController
+  # X17126991 - Craig Smith
   before_action :load_posts, only: :index
 
   def index
-    #logic for your index
+    @q = Post.ransack(params[:q])
+    @posts = @q.result
   end
 
   private

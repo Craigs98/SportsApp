@@ -1,9 +1,12 @@
-  <h1>Article Interface</h1>
+<!-- X17126991 - Craig Smith   -->
+<div class="container">
+  <h1>Article interface</h1>
   <%= search_form_for @q do |f| %>
-  <%= f.label :body_cont %>
+
   <%= f.search_field :body_cont %>
   <%= f.submit %>
   <% end %>
+  </div>
   <div class="container h-100">
     <div class="row h-100 justify-content-center align-items-center">
       <table class="table table-striped">

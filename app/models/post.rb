@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
-  belongs_to :user
+  # X17126991 - Craig Smith
+  belongs_to :user # relationship to user
   # Db query making posts in order
   scope :most_recent, -> { order(id: :desc)}
 
@@ -9,6 +10,7 @@ class Post < ApplicationRecord
     "Published : #{created_at.strftime('%-b %-d, %Y')}"
   end
 
+# displays user email on posts
   def user_name_published
     "Written by: #{user.email}"
   end
